@@ -1,115 +1,58 @@
-# AI-Powered E-Commerce Website
+Django E-commerce Application
 
-This is a feature-rich e-commerce platform with an AI-powered recommendation system that personalizes shopping experiences based on user behavior, purchase history, and browsing patterns.
+Django E-commerce is a fully-featured e-commerce platform built with Django. This application allows users to browse products, manage shopping carts, place orders, and provides an admin interface to manage products, categories, and orders. It is designed to be easy to set up and extend for personal or commercial projects.
 
-## Features
+Features
 
-- **User Management & Authentication**
-  - User registration and login
-  - JWT-based authentication
-  - Profile management
+User registration and authentication
 
-- **Product Management & Smart Search**
-  - Well-structured product catalog with categories and brands
-  - Advanced product filtering and sorting
-  - Smart search with keyword matching
+Product catalog with categories and search functionality
 
-- **AI-Based Recommendation System**
-  - Content-Based Filtering: Suggests similar products based on product attributes
-  - Collaborative Filtering: Suggests products based on similar user preferences
-  - Hybrid Recommendation Model: Combines multiple approaches for accurate predictions
+Shopping cart and checkout system
 
-- **Shopping Cart & Wishlist**
-  - Add/remove products to cart and wishlist
-  - Dynamic cart updates with price calculations
+Order management
 
-- **Secure Payment Integration**
-  - Multiple payment options
-  - Secure checkout process
+Admin dashboard for managing products, categories, and orders
 
-- **Order Management & Tracking**
-  - Order history and tracking
-  - Order status updates
+Responsive design for desktop and mobile devices
 
-- **Product Reviews & Ratings**
-  - User reviews and ratings for products
-  - Average rating calculation
+Installation
 
-## Technologies Used
-
-- **Backend**: Django, Django REST Framework
-- **Database**: SQLite (development), PostgreSQL (production)
-- **AI & Machine Learning**: scikit-learn, pandas, numpy
-- **Authentication**: JWT (JSON Web Tokens)
-
-## API Endpoints
-
-### Authentication
-- `POST /api/token/`: Get JWT token
-- `POST /api/token/refresh/`: Refresh JWT token
-
-### Products
-- `GET /api/products/`: List all products
-- `GET /api/products/{id}/`: Get product details
-- `GET /api/products/featured/`: Get featured products
-- `GET /api/products/new_arrivals/`: Get new arrivals
-- `GET /api/products/top_rated/`: Get top-rated products
-- `GET /api/categories/`: List all categories
-- `GET /api/brands/`: List all brands
-- `POST /api/products/{id}/reviews/`: Add a product review
-- `GET /api/search/?q={query}`: Search products
-
-### Recommendations
-- `GET /api/recommendations/`: Get personalized recommendations
-- `GET /api/recommendations/preferences/`: Get user preferences
-- `POST /api/recommendations/preferences/`: Update user preferences
-
-## Installation
+Follow these steps to set up the project locally:
 
 1. Clone the repository
-```
-git clone https://github.com/yourusername/ai-ecommerce.git
-cd ai-ecommerce
-```
+git clone https://github.com/Dharmaraju53/Django_ecommerce.git
+cd Django_ecommerce
 
-2. Create a virtual environment and install dependencies
-```
+2. Create and activate a virtual environment
+# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Windows
+venv\Scripts\activate
+
+# macOS/Linux
+source venv/bin/activate
+
+3. Install dependencies
 pip install -r requirements.txt
-```
 
-3. Run migrations
-```
+4. Run database migrations
 python manage.py migrate
-```
 
-4. Create a superuser
-```
+5. Create a superuser (admin account)
 python manage.py createsuperuser
-```
 
-5. Run the development server
-```
+6. Start the development server
 python manage.py runserver
-```
 
-6. Access the admin interface at http://127.0.0.1:8000/admin/
+7. Access the application
 
-## AI Recommendation System
+Frontend: http://127.0.0.1:8000/
 
-The recommendation system uses multiple approaches:
+Admin interface: http://127.0.0.1:8000/admin/
+ (login with your superuser credentials)
 
-1. **Content-Based Filtering**: Recommends products similar to what the user has liked before, based on product attributes.
+Contributing
 
-2. **Collaborative Filtering**: Recommends products based on what similar users have liked.
-
-3. **Hybrid Approach**: Combines both methods for better recommendations.
-
-4. **Trending Recommendations**: Shows popular products based on recent activity.
-
-5. **Recent Activity Based**: Recommends products based on the user's recent browsing history.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
+Contributions are welcome! Feel free to submit issues or pull requests to improve this project.
